@@ -37,7 +37,7 @@
     --z-fixed: 100;
   }
 
-  /* Responsive typography */
+  /*==================== Responsive typography ==================== */
 @media screen and (min-width: 1024px) {
     :root {
       --biggest-font-size: 4rem;
@@ -49,6 +49,8 @@
       --smaller-font-size: .813rem;
     }
 }
+
+ /*==================== Reset ==================== */
 
 * {
     box-sizing: border-box;
@@ -90,7 +92,7 @@ input, button {
     outline: none;
 }
 
-/*========== Reusable ==========*/
+/*====================  Reusable ====================*/
 .container {
     max-width: 1024px;
     margin-left: 1.5rem;
@@ -124,7 +126,7 @@ input, button {
     overflow: hidden;
 }
 
-/*========== Header ==========*/
+/*==================== Header ==================== */
 .header {
     position: fixed;
     top: 0;
@@ -205,7 +207,7 @@ input, button {
     color: var(--first-color);
 }
 
-/*========== Home ==========*/
+/*==================== Home ====================*/
 .home {
     background: linear-gradient(178deg,
                 hsl(0, 0%, 22%) 0%,
@@ -331,7 +333,7 @@ input, button {
     display: none;
 }
 
-/*========== Logos ==========*/
+/*==================== Logos ====================*/
 .logos__container {
     padding-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
@@ -349,7 +351,7 @@ input, button {
     opacity: .6;
 }
 
-/*========== Popular ==========*/
+/*==================== Popular ====================*/
 .popular__container {
     padding: 1rem 0 5rem;
 }
@@ -395,7 +397,7 @@ input, button {
     box-shadow: 0 12px 16px hsla(228, 66%, 45%, .1);
 }
 
-/*========== Swipper ==========*/
+/*==================== Swipper ====================*/
 .swiper-button-prev::after,
 .swiper-button-next::after {
     content: '';
@@ -422,3 +424,123 @@ input, button {
 .swiper-button-next {
     right: calc(50% - 3rem);
 }
+
+/*==================== Value ====================*/
+.value__container {
+    row-gap: 3rem;
+}
+
+.value__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.value__orbe {
+    width: 266px;
+    height: 316px;
+    background-color: hsl(228, 24%, 97%);
+    border-radius: 135px 135px 16px 16px;
+}
+
+.value__img {
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 125px 125px 12px 12px;
+    inset: 0;
+    margin: auto;
+    box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+.value__description {
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+
+.value__accordion {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.value__accordion-item {
+    background-color: var(--body-color);
+    border: 2px solid --border-color;
+}
+
+.value__accordion-item {
+    background-color: var(--body-color);
+    border: 2px solid --border-color;
+    border-radius: .5rem;
+    padding: 1rem .75rem;
+}
+
+.value__accordion-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.value__accordion-icon {
+    background-color: --first-color-lighten;
+    padding: 5px;
+    border-radius: .25rem;
+    font-size: 18px;
+    color: var(--first-color);
+    margin-right: .75rem;
+    transition: .3s;
+}
+
+.value__accordion-title {
+    font-size: var(--small-font-size);
+}
+
+.value__accordion-arrow {
+    font-size: var(--small-font-size);
+}
+
+.value__accordion-arrow {
+    display: inline-flex;
+    background-color: var(--first-color-lighten);
+    padding: 0.25rem;
+    color: var(--first-color);
+    border-radius: 2px;
+    font-size: 10px;
+    margin-left: auto;
+    transition: .3s;
+}
+
+.value__accordion-arrow i {
+    transition: .4s;
+}
+
+.value__accordion-description {
+    font-size: var(--smaller-font-size);
+    padding: 1.25rem 2.5rem 0 2.75rem;
+}
+
+.value__accordion-content {
+    overflow: hidden;
+    height: 0;
+    transition: all .25s ease;
+}
+
+.accordion-open {
+    box-shadow: 0 12px 32px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-icon {
+    box-shadow: 0 4px 4px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-arrow {
+    box-shadow: 0 2px 4px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-arrow i {
+    transform: rotate(-180deg);
+}
+
+
+
